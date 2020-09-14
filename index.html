@@ -5,15 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercice 1</title>
     <link rel="stylesheet" href="index.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <script src="index.js"></script>
   </head>
   <body>
     <div class="row">
       <div class="col left" style="border: 5px solid black">
-        <div id="table">
-          <table style="width: 100%">
+        <div id="table-wrapper">
+          <table style="width: 100%" id="tbl">
             <tr>
               <th>Id.Etudiant</th>
               <th>Note devoir</th>
@@ -27,14 +24,19 @@
                 </td>
 
                 <td>
-                  <input value="20" type="text" id="num1" />
+                  <input
+                    value="20"
+                    type="text"
+                    class="note-devoir num"
+                    id="num1"
+                  />
                 </td>
                 <td>
-                  <input value="5" type="text" id="num2" />
+                  <input value="10" type="text" class="num" id="num2" />
                 </td>
 
-                <td>
-                  <div id="sum">25</div>
+                <td class="col-sum">
+                  <div>25</div>
                 </td>
               </form>
             </tr>
@@ -45,14 +47,19 @@
                 </td>
 
                 <td>
-                  <input value="20" type="text" id="num1" />
+                  <input
+                    value="20"
+                    type="text"
+                    class="note-devoir num"
+                    id="num1"
+                  />
                 </td>
                 <td>
-                  <input value="5" type="text" id="num2" />
+                  <input value="5" type="text" class="num" id="num2" />
                 </td>
 
-                <td>
-                  <div id="sum">25</div>
+                <td class="col-sum">
+                  <div>25</div>
                 </td>
               </form>
             </tr>
@@ -63,14 +70,19 @@
                 </td>
 
                 <td>
-                  <input value="20" type="text" id="num1" />
+                  <input
+                    value="20"
+                    type="text"
+                    class="note-devoir num"
+                    id="num1"
+                  />
                 </td>
                 <td>
-                  <input value="5" type="text" id="num2" />
+                  <input value="5" type="text" class="num" id="num2" />
                 </td>
 
-                <td>
-                  <div id="sum">25</div>
+                <td class="col-sum">
+                  <div>25</div>
                 </td>
               </form>
             </tr>
@@ -110,8 +122,11 @@
           border: 5px solid black;
         "
       >
-        <input type="button" value="calcul" onclick="somme()" />
-        <button class="button button2">Stat Calcul</button>
+        <button class="button button2" onclick="somme()">Stat Calcul</button>
+
+        <button class="button button2" onclick="determine()">
+          Stat Calcul
+        </button>
         <button class="button button3">Anuuler</button>
       </div>
     </div>
@@ -146,5 +161,8 @@
         <button class="button button1">Quitter</button>
       </div>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
